@@ -1,7 +1,7 @@
 # myFootprint
 A Carbon Footprint App with features including:
 - a daily test that calculates your CO2 Footprint
-  - weekly, monthly, and annualy! 
+  - weekly, monthly, and annually! 
   - will use the 'Earth Overshoot Day' formula
 - a calendar of all your entries
   - this will have
