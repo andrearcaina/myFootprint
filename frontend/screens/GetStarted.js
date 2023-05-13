@@ -4,7 +4,8 @@ import Calendar from  './Calendar';
 import Tips from  './Tips';
 import LoginPage from  './LoginPage';
 
-export default function Beginning() {
+
+const Beginning = () => {
     const [activePage, setActivePage] = useState(0);
     const subpages = [
         { title: "Page 1", content: "Page 1 content" },
@@ -28,8 +29,8 @@ export default function Beginning() {
             <View style={styles.subPage}> 
                 {activePage === 0 && (
                     <>
-                        <Text style={styles.title}>{subpages[activePage].title}</Text>
-                        <Text style={styles.content}>{subpages[activePage].content}</Text>
+                        <Text style={styles.title}>Calculate your Carbon Footprint!</Text>
+                        <Text style={styles.title}>Something something</Text>
                     </>
                 )}
                 {activePage === 1 && <Calendar />}
@@ -62,6 +63,8 @@ export default function Beginning() {
     );
 };
 
+export default Beginning;
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -80,6 +83,7 @@ const styles = StyleSheet.create({
         fontSize: 24,
         fontFamily: Platform.OS === 'ios' ? 'Menlo' : 'monospace',
         fontWeight: 'bold',
+        textAlign: 'center',
         marginBottom: 20,
     },
     

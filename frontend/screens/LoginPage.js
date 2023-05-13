@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Platform } from 'react-native';
-import { auth } from '../firebase';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Platform, KeyboardAvoidingView } from 'react-native';
+// import { auth } from '../firebase';
+// ^ when this is imported, it gives an error: asyncStorage and INTERNAL
 
-export default function LoginPage() {
-    const [username, setUsername] = useState('');
+const LoginPage = () => {
+    const [email, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
     const handleLogin = function() {
@@ -12,29 +13,36 @@ export default function LoginPage() {
     };
 
     return (
-        <View style={styles.container}>
-        <TextInput
-            style={styles.input}
-            placeholder="Username"
-            value={username}
-            onChangeText={setUsername}
-        />
-        <TextInput
-            style={styles.input}
-            placeholder="Password"
-            secureTextEntry={true}
-            value={password}
-            onChangeText={setPassword}
-        />
-        <TouchableOpacity
-            style={styles.button}
-            onPress={handleLogin}
-            >
-            <Text style={styles.buttonText}>Login</Text>
-        </TouchableOpacity>
-        </View>
+        <KeyboardAvoidingView
+            style={styles.container}
+            behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        >
+            <View style={styles.container}>
+            <TextInput
+                style={styles.input}
+                placeholder="Email"
+                value={email}
+                onChangeText={text => setUsername(text)}
+            />
+            <TextInput
+                style={styles.input}
+                placeholder="Password"
+                secureTextEntry={true}
+                value={password}
+                onChangeText={text => setPassword(text)}
+            />
+            <TouchableOpacity
+                style={styles.button}
+                onPress={handleLogin}
+                >
+                <Text style={styles.buttonText}>Login</Text>
+            </TouchableOpacity>
+            </View>
+        </KeyboardAvoidingView>
     );
 };
+
+export default LoginPage;
 
 const styles = StyleSheet.create({
     container: {

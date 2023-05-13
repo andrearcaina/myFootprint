@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TextInput, Picker, Button, Platform } from 'react-native';
 
-export default function SecondPage() {
+const Tips = () => {
     return (
         <View style={styles.container}>
             <Text style={styles.TrackYourFootprint}>Track Your Carbon Footprint</Text>
@@ -12,6 +12,8 @@ export default function SecondPage() {
         </View>
     );
 }
+
+export default Tips;
 
 const styles = StyleSheet.create({
     container: {
