@@ -34,10 +34,10 @@ const styles = StyleSheet.create({
         backgroundColor: 'blue',
         borderWidth: 1,
         borderColor: 'black',
-      },
+    },
     calendarImage: {
         width: 400,
         height: 300
         
-    }
+    },
 });
