@@ -1,35 +1,73 @@
-import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, Picker, Button } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 
-export default function SecondPage() {
+export default function LoginPage() {
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleLogin = function() {
+        console.log(`Username: ${username}, Password: ${password}`);
+        // TODO: Add logic to authenticate user
+    };
+
     return (
         <View style={styles.container}>
-            <Text style={styles.TrackYourFootprint}>Track Your Carbon Footprint</Text>
-            <Text style={styles.getWeeklyMonthly}>World </Text>
-            <View style={styles.box}></View>
-            <StatusBar style="auto" />
+        <TextInput
+            style={styles.input}
+            placeholder="Username"
+            value={username}
+            onChangeText={setUsername}
+        />
+        <TextInput
+            style={styles.input}
+            placeholder="Password"
+            secureTextEntry={true}
+            value={password}
+            onChangeText={setPassword}
+        />
+        <TouchableOpacity
+            style={styles.button}
+            onPress={handleLogin}
+            >
+            <Text style={styles.buttonText}>Login</Text>
+        </TouchableOpacity>
         </View>
     );
-}
+};
 
 const styles = StyleSheet.create({
     container: {
-        marginTop: 50,
+        flex: 1,
+        justifyContent: 'center',
         alignItems: 'center',
     },
-    TrackYourFootprint: {
-        color: 'rgb(105, 0, 255)',
+    input: {
+        fontFamily: 'monospace',
+        fontWeight: 'bold',
+        fontSize: 18,
+        padding: 10,
+        marginBottom: 20,
+        width: 300,
     },
-    getWeeklyMonthly: {
-        color: 'red',
-        fontSize: 20,
+    button: {
+        backgroundColor: '#3DED97',
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+        borderRadius: 10,
+        elevation: 3,
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
     },
-    box: {
-        width: 100,
-        height: 100,
-        backgroundColor: 'blue',
-        borderWidth: 1,
-        borderColor: 'black',
-      },
+    buttonText: {
+        fontFamily: 'monospace',
+        color: 'black',
+        fontWeight: 'bold',
+        fontSize: 18,
+        textAlign: 'center',
+    },
 });
