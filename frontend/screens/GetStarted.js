@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Platform } from 'react-native';
 import Calendar from  './Calendar';
-import Tips from  './Tips';
 import LoginPage from  './LoginPage';
 
 
@@ -11,7 +10,6 @@ const Beginning = () => {
         { title: "Page 1", content: "Page 1 content" },
         { title: "Page 2", content: "Page 2 content" },
         { title: "Page 3", content: "Page 3 content" },
-        { title: "Page 4", content: "Page 4 content" },
     ];
 
     const handleNextPage = function () {
@@ -34,14 +32,12 @@ const Beginning = () => {
                     </>
                 )}
                 {activePage === 1 && <Calendar />}
-                {activePage === 2 && <Tips />}
-                {activePage === 3 && <LoginPage />}
+                {activePage === 2 && <LoginPage />}
             </View>
         <View style={styles.dots}>
             <View style={[styles.dot, activePage === 0 && styles.activeDot]} />
             <View style={[styles.dot, activePage === 1 && styles.activeDot]} />
             <View style={[styles.dot, activePage === 2 && styles.activeDot]} />
-            <View style={[styles.dot, activePage === 3 && styles.activeDot]} />
         </View>
             <View style={styles.footer}>
                 {activePage > 0 && (

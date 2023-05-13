@@ -3,7 +3,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Beginning from './screens/GetStarted';
 import Calendar from  './screens/Calendar';
-import Tips from  './screens/Tips';
 import LoginPage from  './screens/LoginPage';
 
 const Stack = createNativeStackNavigator();
@@ -21,7 +20,6 @@ export default function App() {
         >
           <Stack.Screen name="GetStarted" component={Beginning} />
           <Stack.Screen name="Calendar" component={Calendar} />
-          <Stack.Screen name="Tips" component={Tips} />
           <Stack.Screen name="Login" component={LoginPage} />
           {/*<Stack.Screen name="CalculatorHome" component={Home.js} />*/}
       </Stack.Navigator>
