@@ -5,6 +5,6 @@ import Beginning from './screens/GetStarted';
 
 export default function App() {
   return (
-      <Beginning />
+      <Beginning /> 
   );
 }
