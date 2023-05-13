@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Platform } from 'react-native';
 import Calendar from  './Calendar';
 import Tips from  './Tips';
 import LoginPage from  './LoginPage';
@@ -78,14 +78,14 @@ const styles = StyleSheet.create({
     
     title: {
         fontSize: 24,
-        fontFamily: 'monospace',
+        fontFamily: Platform.OS === 'ios' ? 'Menlo' : 'monospace',
         fontWeight: 'bold',
         marginBottom: 20,
     },
     
     content: {
         fontSize: 18,
-        fontFamily: 'monospace',
+        fontFamily: Platform.OS === 'ios' ? 'Menlo' : 'monospace',
         textAlign: 'center',
     },
     
@@ -127,6 +127,6 @@ const styles = StyleSheet.create({
         color: '#ffffff',
         fontSize: 18,
         fontWeight: 'bold',
-        fontFamily: 'monospace',
+        fontFamily: Platform.OS === 'ios' ? 'Menlo' : 'monospace',
     },
 });

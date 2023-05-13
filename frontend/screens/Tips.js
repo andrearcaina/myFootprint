@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, Picker, Button } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Picker, Button, Platform } from 'react-native';
 
 export default function SecondPage() {
     return (
