@@ -78,12 +78,14 @@ const styles = StyleSheet.create({
     
     title: {
         fontSize: 24,
+        fontFamily: 'monospace',
         fontWeight: 'bold',
         marginBottom: 20,
     },
     
     content: {
         fontSize: 18,
+        fontFamily: 'monospace',
         textAlign: 'center',
     },
     
@@ -125,5 +127,6 @@ const styles = StyleSheet.create({
         color: '#ffffff',
         fontSize: 18,
         fontWeight: 'bold',
+        fontFamily: 'monospace',
     },
 });
