@@ -1,19 +1,23 @@
-# myFootprint
-A Carbon Footprint App with features including:
-- a daily test at the end of the day 
-  - that calculates your CO2 Footprint weekly, monthly, and annually! 
-  - will also use the 'Earth Overshoot Day' formula
-- a calendar of all your entries
-  - will also have all your answers per day
-  - will also have the final output every Saturday
-- tips to improve your CO2 footprint
-  - this will be based on your answers per day
+# ```myFootprint``` is ...
+a simplistic mobile application designed to help users track and reduce their carbon footprint. The app includes a daily test that calculates the user's CO2 footprint and provides an overview of their weekly, monthly, and annual CO2 emissions, while simultaneously dating their answers on a calendar. This feature allows users to view all their entries and answers per day. The app also provides tips to help users reduce their carbon footprint based on their daily answers.
+- created for the purpose of [TurtleHacks](https://turtlehacks.devpost.com/)!
+
+### ```How to Run``` ###
+- ...
+- ...
+- ...
 
 ### ```Languages && Tools``` ###
 - JavaScript
 - React Native
 - Expo Go
 - Firebase
+
+### ```Future Improvements``` ###
+- ...
+- ...
+- ...
+- ...
 
 ### ```Developers``` ###
 - Andre Arcaina
