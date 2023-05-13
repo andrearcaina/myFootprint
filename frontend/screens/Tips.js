@@ -31,5 +31,5 @@ const styles = StyleSheet.create({
         backgroundColor: 'blue',
         borderWidth: 1,
         borderColor: 'black',
-      },
+    },
 });
