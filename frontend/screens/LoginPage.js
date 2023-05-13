@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Platform } from 'react-native';
+import { auth } from '../firebase';
 
 export default function LoginPage() {
     const [username, setUsername] = useState('');
