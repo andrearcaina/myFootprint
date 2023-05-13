@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import Calendar from  './Calendar';
+import Tips from  './Tips';
+import LoginPage from  './LoginPage';
 
 export default function Beginning() {
     const [activePage, setActivePage] = useState(0);
@@ -23,8 +26,15 @@ export default function Beginning() {
         // and LoginPage.js for the fourth page
         <View style={styles.container}>
             <View style={styles.subPage}> 
-                <Text style={styles.title}>{subpages[activePage].title}</Text>
-                <Text style={styles.content}>{subpages[activePage].content}</Text>
+                {activePage === 0 && (
+                    <>
+                        <Text style={styles.title}>{subpages[activePage].title}</Text>
+                        <Text style={styles.content}>{subpages[activePage].content}</Text>
+                    </>
+                )}
+                {activePage === 1 && <Calendar />}
+                {activePage === 2 && <Tips />}
+                {activePage === 3 && <LoginPage />}
             </View>
         <View style={styles.dots}>
             <View style={[styles.dot, activePage === 0 && styles.activeDot]} />
