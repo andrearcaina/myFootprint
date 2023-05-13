@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Platform } from 'react-native';
 
 export default function LoginPage() {
     const [username, setUsername] = useState('');
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     input: {
-        fontFamily: 'monospace',
+        fontFamily: Platform.OS === 'ios' ? 'Menlo' : 'monospace',
         fontWeight: 'bold',
         fontSize: 18,
         padding: 10,
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
         shadowRadius: 3.84,
     },
     buttonText: {
-        fontFamily: 'monospace',
+        fontFamily: Platform.OS === 'ios' ? 'Menlo' : 'monospace',
         color: 'black',
         fontWeight: 'bold',
         fontSize: 18,
