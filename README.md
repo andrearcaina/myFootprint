@@ -1,7 +1,8 @@
 # ```myFootprint``` is ...
 a simplistic mobile application designed to help users track and reduce their carbon footprint. The app includes a daily test that calculates the user's CO2 footprint and provides an overview of their weekly, monthly, and annual CO2 emissions, while simultaneously dating their answers on a calendar. This feature allows users to view all their entries and answers per day. The app also provides tips to help users reduce their carbon footprint based on their daily answers.
-- created for the purpose of [TurtleHacks](https://turtlehacks.devpost.com/)!
+- created for the purpose of [**TurtleHacks**](https://turtlehacks.devpost.com/)!
 - this will be continued even after the turtlehacks.
+  - Currently what we have -> [***our devpost!***](https://devpost.com/software/myfootprint)
 
 ### ```How to Run``` ###
 - have the right dependencies
